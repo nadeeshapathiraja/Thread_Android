@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clearCount(View v){
+
         tv.setText("00");
     }
 
@@ -28,7 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 for(int i=1; i<100; i++){
                     try {
                         Thread.sleep(1000);
-                        tv.setText(""+i);
+                        int x=i;
+                        Runnable r2= new Runnable() {
+                            @Override
+                            public void run() {
+                                tv.setText(""+x);
+                            }
+                        }
                     }catch (Exception e){
                         e.printStackTrace();
                     }
