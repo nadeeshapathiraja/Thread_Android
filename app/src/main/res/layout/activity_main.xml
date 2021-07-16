@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="20sp">
+    <TextView
+        android:id="@+id/count_number"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="5"
+        android:text="00"
+        android:textSize="70sp"
+        android:gravity="center">
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="80sp"
+            android:text="Clear"
+            android:onClick="clearCount"
+            android:textSize="20sp"
+            android:layout_margin="5sp">
+        </Button>
+        <Button
+            android:id="@+id/btn_count"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="80sp"
+            android:text="Start"
+            android:onClick="startCount"
+            android:textSize="20sp"
+            android:layout_margin="5sp">
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>
