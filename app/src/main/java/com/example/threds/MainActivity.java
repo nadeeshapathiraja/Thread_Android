@@ -3,6 +3,7 @@ package com.example.threds;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,11 +11,15 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tv;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tv = findViewById(R.id.count_number);
+
+
+
     }
 
     public void clearCount(View v){
@@ -35,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
                             public void run() {
                                 tv.setText(""+x);
                             }
-                        }
+                        };
+                        runOnUiThread(r2);
                     }catch (Exception e){
                         e.printStackTrace();
                     }
